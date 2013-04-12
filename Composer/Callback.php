@@ -161,7 +161,6 @@ class Callback
 	{
 		if (!is_file(Config::value('yii.path') . '/yii.php'))
 		{
-			Console::output("%BWarning:%n Yii framework path is wrong at the settings or not yet installed :).\n");
 			// nothing yet installed, return
 			return null;
 		}
@@ -173,9 +172,16 @@ class Callback
 		if (\Yii::app() === null)
 		{
 
-			$env = Console::prompt('Please, enter your environment -ie. "dev | prod | stage": ', array('default' => 'dev'));
-
-			Initializer::buildEnvironmentFiles($env);
+			if (!Config::value('envlock'))
+			{
+				$env = Console::prompt('Please, enter your environment -ie. "dev | prod | stage": ', array('default' => 'dev'));
+				Initializer::buildEnvironmentFiles($env);
+			} else
+			{
+				Console::output("\n%Benv.lock%n file found. No environment request required.\n");
+				Console::output("Note: if you wish to re-do enviroment setting merging, please remove the %Benv.lock%n file " .
+					"from the Yiinitializr %Bconfig%n folder.");
+			}
 
 			Initializer::createRuntimeFolders();
 
