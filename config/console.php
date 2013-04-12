@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom console.php config file.
+ * Custom *EXAMPLE* console.php config file.
  *
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @link http://www.ramirezcobos.com/

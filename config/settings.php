@@ -1,6 +1,6 @@
 <?php
 /**
- * Yiinitializr configuration file.
+ * Yiinitializr *EXAMPLE* configuration file.
  *
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @link http://www.ramirezcobos.com/
