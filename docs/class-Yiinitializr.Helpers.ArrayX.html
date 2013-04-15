@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Yiinitializr\Helpers\ArrayX</title>
+
+	<script type="text/javascript" src="resources/combined.js?542888698"></script>
+	<script type="text/javascript" src="elementlist.js?2883146364"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Overview</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Yiinitializr.Helpers.html" title="Summary of Yiinitializr\Helpers"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-Yiinitializr.html">Yiinitializr<span></span></a>
+						<ul>
+				<li><a href="namespace-Yiinitializr.Cli.html">Cli</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Clio.html">Clio</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Composer.html">Composer</a>
+						</li>
+				<li class="active"><a href="namespace-Yiinitializr.Helpers.html">Helpers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Yiinitializr.Helpers.ArrayX.html">ArrayX</a></li>
+				<li><a href="class-Yiinitializr.Helpers.Config.html">Config</a></li>
+				<li><a href="class-Yiinitializr.Helpers.Initializer.html">Initializer</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class ArrayX</h1>
+
+
+	<div class="description">
+	
+<p>ArrayX provides a set of useful functions</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Yiinitializr.html">Yiinitializr</a>\<a href="namespace-Yiinitializr.Helpers.html">Helpers</a><br />
+		<b>Package:</b> Yiinitializr\helpers<br />
+
+				<b>Author:</b>
+				Antonio Ramirez &lt;<a
+href="mailto:amigo.cobos&#64;gmail.com">amigo.cobos&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				1.0<br />
+		<b>Located at</b> <a href="source-class-Yiinitializr.Helpers.ArrayX.html#13-416" title="Go to source code">Helpers/ArrayX.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public static
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#22-57" title="Go to source code">get</a>( <span>array <var>$array</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get an item from an array using "dot" notation.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get an item from an array using "dot" notation.</p>
+
+<pre>
+<span
+class="php-comment">// Get the $array['user']['name'] value from the array</span>
+<span
+class="php-var">$name</span> = ArrayX::get(<span
+class="php-var">$array</span>, <span
+class="php-quote">'user.name'</span>);
+
+<span
+class="php-comment">// Return a default from if the specified item doesn't exist</span>
+<span
+class="php-var">$name</span> = ArrayX::get(<span
+class="php-var">$array</span>, <span class="php-quote">'user.name'</span>, <span
+class="php-quote">'Taylor'</span>);
+</pre>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key</dd>
+						<dt><var>$default</var></dt>
+						<dd><code>mixed</code><br>$default</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="pop" id="_pop">
+
+			<td class="attributes"><code>
+				 public static
+				mixed|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pop">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#59-78" title="Go to source code">pop</a>( <span>mixed <var>&amp; $array</var></span>, <span>mixed <var>$key</var></span>, <span>null <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Removes an item from the given options and returns the value.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Removes an item from the given options and returns the value.</p>
+
+<p>If no key is found, then default value will be returned.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>mixed</code><br>$array</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$default</var></dt>
+						<dd><code>null</code><br>$default</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed|null</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set" id="_set">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#80-122" title="Go to source code">set</a>( <span>array <var>&amp; $array</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set an array item to a given value using "dot" notation.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set an array item to a given value using "dot" notation.</p>
+
+<p>If no key is given to the method, the entire array will be replaced.</p>
+
+<pre>
+<span
+class="php-comment">// Set the $array['user']['name'] value on the array</span>
+ArrayX::set(<span
+class="php-var">$array</span>, <span class="php-quote">'user.name'</span>, <span
+class="php-quote">'Taylor'</span>);
+
+<span
+class="php-comment">// Set the $array['user']['name']['first'] value on the array</span>
+ArrayX::set(<span
+class="php-var">$array</span>, <span
+class="php-quote">'user.name.first'</span>, <span
+class="php-quote">'Michael'</span>);
+</pre>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="forget" id="_forget">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_forget">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#124-162" title="Go to source code">forget</a>( <span>array <var>&amp; $array</var></span>, <span>string <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Remove an array item from a given array using "dot" notation.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Remove an array item from a given array using "dot" notation.</p>
+
+<pre>
+<span
+class="php-comment">// Remove the $array['user']['name'] item from the array</span>
+ArrayX::forget(<span
+class="php-var">$array</span>, <span
+class="php-quote">'user.name'</span>);
+
+<span
+class="php-comment">// Remove the $array['user']['name']['first'] item from the array</span>
+ArrayX::forget(<span
+class="php-var">$array</span>, <span
+class="php-quote">'user.name.first'</span>);
+</pre>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="first" id="_first">
+
+			<td class="attributes"><code>
+				 public static
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_first">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#164-188" title="Go to source code">first</a>( <span>array <var>$array</var></span>, <span><code><a href="class-Closure.html">Closure</a></code> <var>$callback</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Return the first element in an array which passes a given truth test.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the first element in an array which passes a given truth test.</p>
+
+<pre>
+<span
+class="php-comment">// Return the first array element that equals &quot;Taylor&quot;</span>
+<span
+class="php-var">$value</span> = ArrayX::first(<span
+class="php-var">$array</span>, <span class="php-keyword1">function</span>(<span
+class="php-var">$k</span>, <span class="php-var">$v</span>) {<span
+class="php-keyword1">return</span> <span class="php-var">$v</span> == <span
+class="php-quote">'Taylor'</span>;});
+
+<span
+class="php-comment">// Return a default value if no matching element is found</span>
+<span
+class="php-var">$value</span> = ArrayX::first(<span
+class="php-var">$array</span>, <span class="php-keyword1">function</span>(<span
+class="php-var">$k</span>, <span class="php-var">$v</span>) {<span
+class="php-keyword1">return</span> <span class="php-var">$v</span> == <span
+class="php-quote">'Taylor'</span>}, <span
+class="php-quote">'Default'</span>);
+</pre>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+						<dt><var>$callback</var></dt>
+						<dd><code><code><a href="class-Closure.html">Closure</a></code></code><br>$callback</dd>
+						<dt><var>$default</var></dt>
+						<dd><code>mixed</code><br>$default</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="stripSlashes" id="_stripSlashes">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_stripSlashes">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#190-217" title="Go to source code">stripSlashes</a>( <span>array <var>$array</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Recursively remove slashes from array keys and values.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Recursively remove slashes from array keys and values.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="divide" id="_divide">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_divide">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#219-228" title="Go to source code">divide</a>( <span>array <var>$array</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Divide an array into two arrays. One with keys and the other with values.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Divide an array into two arrays. One with keys and the other with values.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="pluck" id="_pluck">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pluck">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#230-244" title="Go to source code">pluck</a>( <span>array <var>$array</var></span>, <span>string <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Pluck an array of values from an array.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Pluck an array of values from an array.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="only" id="_only">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_only">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#246-256" title="Go to source code">only</a>( <span>array <var>$array</var></span>, <span>array <var>$keys</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get a subset of the items from the given array.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a subset of the items from the given array.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+						<dt><var>$keys</var></dt>
+						<dd><code>array</code><br>$keys</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="except" id="_except">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_except">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#258-268" title="Go to source code">except</a>( <span>array <var>$array</var></span>, <span>array <var>$keys</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get all of the given array except for a specified array of items.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get all of the given array except for a specified array of items.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+						<dt><var>$keys</var></dt>
+						<dd><code>array</code><br>$keys</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="head" id="_head">
+
+			<td class="attributes"><code>
+				 public static
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_head">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#271-282" title="Go to source code">head</a>( <span>array <var>$array</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Return the first element of an array.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the first element of an array.</p>
+
+<p>This is simply a convenient wrapper around the "reset" method.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="merge" id="_merge">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_merge">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#284-314" title="Go to source code">merge</a>( <span>array <var>$a</var></span>, <span>array <var>$b</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Merges two or more arrays into one recursively. If each array has an element
+with the same string key value, the latter will overwrite the former (different
+from array_merge_recursive). Recursive merging will be conducted if both arrays
+have an element of array type and are having the same key. For integer-keyed
+elements, the elements from the latter array will be appended to the former
+array.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Merges two or more arrays into one recursively. If each array has an element
+with the same string key value, the latter will overwrite the former (different
+from array_merge_recursive). Recursive merging will be conducted if both arrays
+have an element of array type and are having the same key. For integer-keyed
+elements, the elements from the latter array will be appended to the former
+array.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$a</var></dt>
+						<dd><code>array</code><br>$a array to be merged to</dd>
+						<dt><var>$b</var></dt>
+						<dd><code>array</code><br>$b array to be merged from. You can specifiy additional arrays via third
+argument, fourth argument etc.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>the merged array (the original arrays are not changed.)<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="deepSearch" id="_deepSearch">
+
+			<td class="attributes"><code>
+				 public static
+				boolean|mixed|string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_deepSearch">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#316-373" title="Go to source code">deepSearch</a>( <span>array <var>$array</var></span>, <span>string <var>$search</var></span>, <span>boolean <var>$field</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Searches for a given value in an array of arrays, objects and scalar values.
+You can optionally specify a field of the nested arrays and objects to search
+in.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Searches for a given value in an array of arrays, objects and scalar values.
+You can optionally specify a field of the nested arrays and objects to search
+in.</p>
+
+<p>Credits to Util.php</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array The array to search</dd>
+						<dt><var>$search</var></dt>
+						<dd><code>string</code><br>$search The value to search for</dd>
+						<dt><var>$field</var></dt>
+						<dd><code>boolean</code><br>$field The field to search in, if not specified all fields will be searched</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean|mixed|string</code><br>False on failure or the array key on<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="https://github.com/brandonwamboldt/utilphp/blob/master/util.php">https://github.com/brandonwamboldt/utilphp/blob/master/util.php</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="deepMap" id="_deepMap">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_deepMap">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#375-402" title="Go to source code">deepMap</a>( <span>array <var>$array</var></span>, <span>mixed <var>$callback</var></span>, <span>boolean <var>$on_nonscalar</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Returns an array containing all the elements of arr1 after applying the
+callback function to each one.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns an array containing all the elements of arr1 after applying the
+callback function to each one.</p>
+
+<p>Credits to Util.php</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$array</var></dt>
+						<dd><code>array</code><br>$array an array to run through the callback function</dd>
+						<dt><var>$callback</var></dt>
+						<dd><code>mixed</code><br>$callback Callback function to run for each element in each array</dd>
+						<dt><var>$on_nonscalar</var></dt>
+						<dd><code>boolean</code><br>$on_nonscalar whether or not to call the callback function on nonscalar values
+(objects, resr, etc)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="https://github.com/brandonwamboldt/utilphp/blob/master/util.php">https://github.com/brandonwamboldt/utilphp/blob/master/util.php</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="value" id="_value">
+
+			<td class="attributes"><code>
+				 public static
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_value">#</a>
+			<code><a href="source-class-Yiinitializr.Helpers.ArrayX.html#404-415" title="Go to source code">value</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Return the value of the given item.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the value of the given item.</p>
+
+<p>If the given item is a Closure the result of the Closure will be
+returned.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

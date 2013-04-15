@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Yiinitializr\Clio\Daemon</title>
+
+	<script type="text/javascript" src="resources/combined.js?542888698"></script>
+	<script type="text/javascript" src="elementlist.js?2883146364"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Overview</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Yiinitializr.Clio.html" title="Summary of Yiinitializr\Clio"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-Yiinitializr.html">Yiinitializr<span></span></a>
+						<ul>
+				<li><a href="namespace-Yiinitializr.Cli.html">Cli</a>
+						</li>
+				<li class="active"><a href="namespace-Yiinitializr.Clio.html">Clio</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Composer.html">Composer</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Helpers.html">Helpers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Yiinitializr.Clio.Daemon.html">Daemon</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Daemon</h1>
+
+
+	<div class="description">
+	
+<p>Daemon provides helpers for starting and killing daemonized processes</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Yiinitializr.html">Yiinitializr</a>\<a href="namespace-Yiinitializr.Clio.html">Clio</a><br />
+		<b>Package:</b> Yiinitializr\Cli<br />
+
+				<b>Author:</b>
+				Antonio Ramirez &lt;<a
+href="mailto:amigo.cobos&#64;gmail.com">amigo.cobos&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				1.0<br />
+		<b>Located at</b> <a href="source-class-Yiinitializr.Clio.Daemon.html#14-163" title="Go to source code">Cli/Daemon.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="work" id="_work">
+
+			<td class="attributes"><code>
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_work">#</a>
+			<code><a href="source-class-Yiinitializr.Clio.Daemon.html#23-97" title="Go to source code">work</a>( <span>array <var>$options</var></span>, <span><code><a href="class-Closure.html">Closure</a></code> <var>$callable</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Daemonize a Closure object.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Daemonize a Closure object.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd><code>array</code><br>$options Set of options</dd>
+						<dt><var>$callable</var></dt>
+						<dd><code>callable</code><br>$callable Closure object to daemonize</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>True on success<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isRunning" id="_isRunning">
+
+			<td class="attributes"><code>
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isRunning">#</a>
+			<code><a href="source-class-Yiinitializr.Clio.Daemon.html#99-125" title="Go to source code">isRunning</a>( <span>mixed <var>$file</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Whether a process is running or not</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether a process is running or not</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$file</var></dt>
+						<dd><code>mixed</code><br>$file</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="kill" id="_kill">
+
+			<td class="attributes"><code>
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_kill">#</a>
+			<code><a href="source-class-Yiinitializr.Clio.Daemon.html#127-162" title="Go to source code">kill</a>( <span>mixed <var>$file</var></span>, <span>boolean <var>$delete</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Kills a daemon process specified by its PID file.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Kills a daemon process specified by its PID file.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$file</var></dt>
+						<dd><code>mixed</code><br>$file Daemon PID file</dd>
+						<dt><var>$delete</var></dt>
+						<dd><code>boolean</code><br>$delete Flag to delete PID file after killing</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>True on success, false otherwise<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

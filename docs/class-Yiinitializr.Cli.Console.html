@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Yiinitializr\Cli\Console</title>
+
+	<script type="text/javascript" src="resources/combined.js?542888698"></script>
+	<script type="text/javascript" src="elementlist.js?2883146364"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Overview</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Yiinitializr.Cli.html" title="Summary of Yiinitializr\Cli"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-Yiinitializr.html">Yiinitializr<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Yiinitializr.Cli.html">Cli</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Clio.html">Clio</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Composer.html">Composer</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Helpers.html">Helpers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Yiinitializr.Cli.Console.html">Console</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Console</h1>
+
+
+	<div class="description">
+	
+<p>Console provides a set of useful functions to work on the terminal</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Yiinitializr.html">Yiinitializr</a>\<a href="namespace-Yiinitializr.Cli.html">Cli</a><br />
+		<b>Package:</b> Yiinitializr\Cli<br />
+
+				<b>Author:</b>
+				Antonio Ramirez &lt;<a
+href="mailto:amigo.cobos&#64;gmail.com">amigo.cobos&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				1.0<br />
+		<b>Located at</b> <a href="source-class-Yiinitializr.Cli.Console.html#14-487" title="Go to source code">Cli/Console.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="color" id="_color">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_color">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#107-136" title="Go to source code">color</a>( <span>string <var>$fgcolor</var></span>, <span>string <var>$style</var></span>, <span>string <var>$bgcolor</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Create ANSI-control codes for text foreground and background colors, and
+styling.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Create ANSI-control codes for text foreground and background colors, and
+styling.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$fgcolor</var></dt>
+						<dd><code>string</code><br>$fgcolor Text foreground color</dd>
+						<dt><var>$style</var></dt>
+						<dd><code>string</code><br>$style Text style</dd>
+						<dt><var>$bgcolor</var></dt>
+						<dd><code>string</code><br>$bgcolor Text background color</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>ANSI-control code<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="colorize" id="_colorize">
+
+			<td class="attributes"><code>
+				 public static
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_colorize">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#138-185" title="Go to source code">colorize</a>( <span>mixed <var>$text</var></span>, <span>boolean <var>$color</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+<p>aken from PEAR's Console_Color:</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>aken from PEAR's Console_Color:</p>
+
+<p>Converts colorcodes in the format %y (for yellow) into ansi-control codes.
+The conversion table is: ('bold' meaning 'light' on some terminals). It's almost
+the same conversion table irssi uses.</p>
+
+<pre>
+                 text      text            background
+     ------------------------------------------------
+     %k %K %0    black     dark grey       black
+     %r %R %1    red       bold red        red
+     %g %G %2    green     bold green      green
+     %y %Y %3    yellow    bold yellow     yellow
+     %b %B %4    blue      bold blue       blue
+     %m %M %5    magenta   bold magenta    magenta
+     %p %P       magenta (think: purple)
+     %c %C %6    cyan      bold cyan       cyan
+     %w %W %7    white     bold white      white
+
+     %F     Blinking, Flashing
+     %U     Underline
+     %8     Reverse
+     %_,%9  Bold
+
+     %n     Resets the color
+     %%     A single %
+</pre>
+
+<p>First param is the string to convert, second is an optional flag if colors
+should be used. It defaults to true, if set to false, the colorcodes will just
+be removed (And %% will be transformed into %)</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>mixed</code><br>$text</dd>
+						<dt><var>$color</var></dt>
+						<dd><code>boolean</code><br>$color</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="decolorize" id="_decolorize">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_decolorize">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#187-197" title="Go to source code">decolorize</a>( <span>string <var>$text</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Strips a string from color specifiers.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Strips a string from color specifiers.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text String to strip</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="strip" id="_strip">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_strip">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#199-209" title="Go to source code">strip</a>( <span>string <var>$text</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Strips a string of ansi-control codes.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Strips a string of ansi-control codes.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text String to strip</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="stdin" id="_stdin">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_stdin">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#211-221" title="Go to source code">stdin</a>( <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Gets input from STDIN and returns a string right-trimmed for EOLs.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Gets input from STDIN and returns a string right-trimmed for EOLs.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$raw</var></dt>
+						<dd><code>boolean</code><br>$raw If set to true, returns the raw string without trimming</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="stdout" id="_stdout">
+
+			<td class="attributes"><code>
+				 public static
+				integer|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_stdout">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#223-240" title="Go to source code">stdout</a>( <span>string <var>$text</var></span>, <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Prints text to STDOUT.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prints text to STDOUT.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text</dd>
+						<dt><var>$raw</var></dt>
+						<dd><code>boolean</code><br>$raw</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|false</code><br>Number of bytes printed or false on error<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="stderr" id="_stderr">
+
+			<td class="attributes"><code>
+				 public static
+				integer|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_stderr">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#242-259" title="Go to source code">stderr</a>( <span>string <var>$text</var></span>, <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Prints text to STDERR.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prints text to STDERR.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text</dd>
+						<dt><var>$raw</var></dt>
+						<dd><code>boolean</code><br>$raw</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|false</code><br>Number of bytes printed or false on error<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="error" id="_error">
+
+			<td class="attributes"><code>
+				 public static
+				integer|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_error">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#261-272" title="Go to source code">error</a>( <span>string <var>$text</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Prints text to STDERR appended with a PHP_EOL.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prints text to STDERR appended with a PHP_EOL.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text</dd>
+						<dt><var>$raw</var></dt>
+						<dd><code>boolean</code><br>$raw</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|false</code><br>Number of bytes printed or false on error<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="input" id="_input">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_input">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#274-288" title="Go to source code">input</a>( <span>string <var>$prompt</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Asks the user for input. Ends when the user types a PHP_EOL. Optionally
+provide a prompt.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Asks the user for input. Ends when the user types a PHP_EOL. Optionally
+provide a prompt.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$prompt</var></dt>
+						<dd><code>string</code><br>$prompt String prompt (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>User input<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="output" id="_output">
+
+			<td class="attributes"><code>
+				 public static
+				integer|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_output">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#290-301" title="Go to source code">output</a>( <span>string <var>$text</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Prints text to STDOUT appended with a PHP_EOL.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prints text to STDOUT appended with a PHP_EOL.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text</dd>
+						<dt><var>$raw</var></dt>
+						<dd><code>boolean</code><br>$raw</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|false</code><br>Number of bytes printed or false on error<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="prompt" id="_prompt">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_prompt">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#303-345" title="Go to source code">prompt</a>( <span>string <var>$text</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>Prompts the user for input</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prompts the user for input</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text Prompt string</dd>
+						<dt><var>$options</var></dt>
+						<dd><code>array</code><br>$options Set of options</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="confirm" id="_confirm">
+
+			<td class="attributes"><code>
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_confirm">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#347-360" title="Go to source code">confirm</a>( <span>string <var>$text</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Asks the user for a simple yes/no confirmation.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Asks the user for a simple yes/no confirmation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text Prompt string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Either true or false<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="select" id="_select">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_select">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#362-384" title="Go to source code">select</a>( <span>string <var>$text</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>Gives the user an option to choose from. Giving '?' as an input will show a
+list of options to choose from and their explanations.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Gives the user an option to choose from. Giving '?' as an input will show a
+list of options to choose from and their explanations.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd><code>string</code><br>$text Prompt string</dd>
+						<dt><var>$options</var></dt>
+						<dd><code>array</code><br>$options Key-value array of options to choose from</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>An option character the user chose<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="work" id="_work">
+
+			<td class="attributes"><code>
+				 public static
+				boolean|integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_work">#</a>
+			<code><a href="source-class-Yiinitializr.Cli.Console.html#386-486" title="Go to source code">work</a>( <span><code><a href="class-Closure.html">Closure</a></code> <var>$callable</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Execute a Closure as another process in the background while showing a status
+update. The status update can be an indefinite spinner or a string periodically
+sent from the background process, depending on whether the provided Closure
+object has a $socket parameter or not. Messaging to the main process is done by
+socket_* functions. The return value is either the return value of the
+background process, or false if the process fork failed.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Execute a Closure as another process in the background while showing a status
+update. The status update can be an indefinite spinner or a string periodically
+sent from the background process, depending on whether the provided Closure
+object has a $socket parameter or not. Messaging to the main process is done by
+socket_* functions. The return value is either the return value of the
+background process, or false if the process fork failed.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$callable</var></dt>
+						<dd><code>callable</code><br>$callable Closure object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean|integer</code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-Exception.html">Exception</a></code></code><br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="FGCOLOR" id="$FGCOLOR">
+			<td class="attributes"><code>
+				protected static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Yiinitializr.Cli.Console.html#23-36" title="Go to source code"><var>$FGCOLOR</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$FGCOLOR" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Text foreground colors.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Text foreground colors.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="STYLE" id="$STYLE">
+			<td class="attributes"><code>
+				protected static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Yiinitializr.Cli.Console.html#38-51" title="Go to source code"><var>$STYLE</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$STYLE" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Text styling.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Text styling.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="BGCOLOR" id="$BGCOLOR">
+			<td class="attributes"><code>
+				protected static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Yiinitializr.Cli.Console.html#53-66" title="Go to source code"><var>$BGCOLOR</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$BGCOLOR" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Text background color.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Text background color.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="CONVERSIONS" id="$CONVERSIONS">
+			<td class="attributes"><code>
+				protected static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Yiinitializr.Cli.Console.html#68-105" title="Go to source code"><var>$CONVERSIONS</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$CONVERSIONS" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Color specifier conversion table. Taken from PEAR's Console_Color.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Color specifier conversion table. Taken from PEAR's Console_Color.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

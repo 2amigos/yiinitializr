@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Yiinitializr\Composer\Callback</title>
+
+	<script type="text/javascript" src="resources/combined.js?542888698"></script>
+	<script type="text/javascript" src="elementlist.js?2883146364"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Overview</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Yiinitializr.Composer.html" title="Summary of Yiinitializr\Composer"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-Yiinitializr.html">Yiinitializr<span></span></a>
+						<ul>
+				<li><a href="namespace-Yiinitializr.Cli.html">Cli</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Clio.html">Clio</a>
+						</li>
+				<li class="active"><a href="namespace-Yiinitializr.Composer.html">Composer</a>
+						</li>
+				<li><a href="namespace-Yiinitializr.Helpers.html">Helpers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Yiinitializr.Composer.Callback.html">Callback</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Callback</h1>
+
+
+	<div class="description">
+	
+<p>Callback provides composer hooks</p>
+
+<p>Totally inspired by the ComposerCallback of Phundament3 and adapted for its
+use with Yiinitialzr</p>
+
+<p>This setup class triggers <code>./yiic migrate</code> at post-install and
+post-update. For a package the class triggers <code>./yiic
+&lt;vendor/&lt;packageName&gt;-&lt;action&gt;</code> at post-package-install and
+post-package-update.</p>
+
+<p>You can also create new commands to be called within your boilerplate
+configuration.</p>
+
+<p>See composer manual (<a
+href="http://getcomposer.org/doc/articles/scripts.md">http://getcomposer.org/doc/articles/scripts.md</a>)</p>
+
+<p>Usage example</p>
+
+<pre>
+config.php
+    'params' =&gt; array(
+           'composer.callbacks' =&gt; array(
+           'post-update' =&gt; array('yiic', 'migrate'),
+           'post-install' =&gt; array('yiic', 'migrate'),
+           'yiisoft/yii-install' =&gt; array('yiic', 'webapp', realpath(dirname(__FILE__))),
+       ),
+))
+
+composer.json
+  &quot;scripts&quot;: {
+                &quot;pre-install-cmd&quot;: &quot;Yiinitialzr\\Composer\\Callback::preInstall&quot;,
+        &quot;post-install-cmd&quot;: &quot;Yiinitialzr\\Composer\\Callback::postInstall&quot;,
+        &quot;pre-update-cmd&quot;: &quot;Yiinitialzr\\Composer\\Callback::preUpdate&quot;,
+        &quot;post-update-cmd&quot;: &quot;Yiinitialzr\\Composer\\Callback::postUpdate&quot;,
+        &quot;post-package-install&quot;: [
+                &quot;Yiinitialzr\\Composer\\Callback::postPackageInstall&quot;
+        ],
+        &quot;post-package-update&quot;: [
+                &quot;Yiinitialzr\\Composer\\Callback::postPackageUpdate&quot;
+        ]
+}
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Yiinitializr.html">Yiinitializr</a>\<a href="namespace-Yiinitializr.Composer.html">Composer</a><br />
+		<b>Package:</b> Yiinitializr\helpers<br />
+
+				<b>Author:</b>
+				Antonio Ramirez &lt;<a
+href="mailto:amigo.cobos&#64;gmail.com">amigo.cobos&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				1.0<br />
+		<b>Located at</b> <a href="source-class-Yiinitializr.Composer.Callback.html#23-209" title="Go to source code">Composer/Callback.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="preInstall" id="_preInstall">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_preInstall">#</a>
+			<code><a href="source-class-Yiinitializr.Composer.Callback.html#69-85" title="Go to source code">preInstall</a>( <span>Composer\Script\Event <var>$event</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Displays welcome message</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Displays welcome message</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$event</var></dt>
+						<dd><code>Composer\Script\Event</code><br>$event</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="postInstall" id="_postInstall">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_postInstall">#</a>
+			<code><a href="source-class-Yiinitializr.Composer.Callback.html#87-96" title="Go to source code">postInstall</a>( <span>Composer\Script\Event <var>$event</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Executes a post-install callback</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Executes a post-install callback</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$event</var></dt>
+						<dd><code>Composer\Script\Event</code><br>$event</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="preUpdate" id="_preUpdate">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_preUpdate">#</a>
+			<code><a href="source-class-Yiinitializr.Composer.Callback.html#98-108" title="Go to source code">preUpdate</a>( <span>Composer\Script\Event <var>$event</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Displays updating message</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Displays updating message</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$event</var></dt>
+						<dd><code>Composer\Script\Event</code><br>$event</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="postUpdate" id="_postUpdate">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_postUpdate">#</a>
+			<code><a href="source-class-Yiinitializr.Composer.Callback.html#110-120" title="Go to source code">postUpdate</a>( <span>Composer\Script\Event <var>$event</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Executes post-update message</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Executes post-update message</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$event</var></dt>
+						<dd><code>Composer\Script\Event</code><br>$event</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="postPackageInstall" id="_postPackageInstall">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_postPackageInstall">#</a>
+			<code><a href="source-class-Yiinitializr.Composer.Callback.html#122-133" title="Go to source code">postPackageInstall</a>( <span>Composer\Script\Event <var>$event</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Executes ./yiic &lt;vendor/&lt;packageName&gt;-&lt;action&gt;</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Executes ./yiic &lt;vendor/&lt;packageName&gt;-&lt;action&gt;</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$event</var></dt>
+						<dd><code>Composer\Script\Event</code><br>$event</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="postPackageUpdate" id="_postPackageUpdate">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_postPackageUpdate">#</a>
+			<code><a href="source-class-Yiinitializr.Composer.Callback.html#135-146" title="Go to source code">postPackageUpdate</a>( <span>Composer\Script\Event <var>$event</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Executes ./yiic &lt;vendor/&lt;packageName&gt;-&lt;action&gt;</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Executes ./yiic &lt;vendor/&lt;packageName&gt;-&lt;action&gt;</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$event</var></dt>
+						<dd><code>Composer\Script\Event</code><br>$event</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

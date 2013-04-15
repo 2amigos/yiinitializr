@@ -1,6 +1,28 @@
 <?php
 /**
- * Yiinitialzr\Composer\Callback provides composer hooks
+ * Callback class file
+ *
+ * @author Antonio Ramirez <amigo.cobos@gmail.com>
+ * @link http://2amigos.us
+ * @copyright 2013 2amigOS! Consultation Group LLC
+ * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
+ *
+ * Credits to Phundament... Tobias, thanks for introducing me the wonders of composer
+ *
+ * @author Tobias Munk <schmunk@usrbin.de>
+ * @link http://www.phundament.com/
+ * @copyright Copyright &copy; 2012 diemeisterei GmbH
+ * @license http://www.phundament.com/license
+ */
+namespace Yiinitializr\Composer;
+
+use Composer\Script\Event;
+use Yiinitializr\Helpers\Initializer;
+use Yiinitializr\Helpers\Config;
+use Yiinitializr\Cli\Console;
+/**
+ *
+ * Callback provides composer hooks
  *
  * Totally inspired by the ComposerCallback of Phundament3 and adapted for its use with Yiinitialzr
  *
@@ -13,7 +35,7 @@
  * See composer manual (http://getcomposer.org/doc/articles/scripts.md)
  *
  * Usage example
- *
+ * <pre>
  * config.php
  *     'params' => array(
  *            'composer.callbacks' => array(
@@ -36,27 +58,12 @@
  *          	"Yiinitialzr\\Composer\\Callback::postPackageUpdate"
  *        	]
  * }
- *
+ * </pre>
  *
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://2amigos.us
- * @copyright 2013 2amigOS! Consultation Group LLC
- * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- *
- * Credits to Phundament... Tobias, thanks for introducing me the wonders of composer
- *
- * @author Tobias Munk <schmunk@usrbin.de>
- * @link http://www.phundament.com/
- * @copyright Copyright &copy; 2012 diemeisterei GmbH
- * @license http://www.phundament.com/license
+ * @package Yiinitializr.helpers
+ * @since 1.0
  */
-namespace Yiinitializr\Composer;
-
-use Composer\Script\Event;
-use Yiinitializr\Helpers\Initializer;
-use Yiinitializr\Helpers\Config;
-use Yiinitializr\Cli\Console;
-
 class Callback
 {
 	/**
