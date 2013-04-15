@@ -13,7 +13,7 @@ namespace Yiinitializr\Helpers;
 /**
  * ArrayX provides a set of useful functions
  *
- * @author Antonio Ramirez <ramirez.cobos@gmail.com>
+ * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @package Yiinitializr.helpers
  * @since 1.0
  */

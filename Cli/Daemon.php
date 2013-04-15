@@ -14,7 +14,7 @@ namespace Yiinitializr\Clio;
 /**
  * Daemon  provides helpers for starting and killing daemonized processes
  *
- * @author Antonio Ramirez <ramirez.cobos@gmail.com>
+ * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @package Yiinitializr.Cli
  * @since 1.0
  */

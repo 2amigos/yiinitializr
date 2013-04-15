@@ -81,10 +81,13 @@ class Initializer
 		$mergedSettingFiles = Config::value('yiinitializr.app.files.config.' . $configName);
 		if (null !== $mergedSettingFiles)
 		{
-			if (is_array($mergedSettingFiles))
-				$files = ArrayX::merge($files, $mergedSettingFiles);
+			if (is_array($mergeWith))
+			{
+				foreach($mergeWith as $file)
+					$files[] = $file;
+			}
 			else
-				$files[] = $mergedSettingFiles;
+				$files[] = $mergeWith;
 		}
 
 		$config = self::build($directory, $files);
@@ -145,6 +148,8 @@ class Initializer
 
 		date_default_timezone_set($params['php.timezone']);
 
+		if(!class_exists('YiiBase'))
+			require(Config::value('yii.path').'/yii.php');
 	}
 
 	/**

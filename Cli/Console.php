@@ -14,7 +14,7 @@ namespace Yiinitializr\Cli;
 /**
  * Console provides a set of useful functions to work on the terminal
  *
- * @author Antonio Ramirez <ramirez.cobos@gmail.com>
+ * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @package Yiinitializr.Cli
  * @since 1.0
  */
