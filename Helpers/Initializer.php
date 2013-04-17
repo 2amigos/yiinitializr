@@ -81,13 +81,13 @@ class Initializer
 		$mergedSettingFiles = Config::value('yiinitializr.app.files.config.' . $configName);
 		if (null !== $mergedSettingFiles)
 		{
-			if (is_array($mergeWith))
+			if (is_array($mergedSettingFiles))
 			{
-				foreach($mergeWith as $file)
+				foreach($mergedSettingFiles as $file)
 					$files[] = $file;
 			}
 			else
-				$files[] = $mergeWith;
+				$files[] = $mergedSettingFiles;
 		}
 
 		$config = self::build($directory, $files);
