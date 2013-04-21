@@ -5,20 +5,15 @@ Library that will help boost your application installation with ease and also to
 bootstrap files on a much cleaner way that the framework currently proposes. For example:
 
 ```
-// yii has been installed via composer
-require('./../app/lib/vendor/yiisoft/yii/framework/yii.php');
 
-// set alias for namespacing 
-// make sure the path is correct as it can also be installed via composer (see above)
-Yii::setPathOfAlias('Yiinitializr', './../app/lib/Yiinitializr');
+// if installed via composer
+require('./../../common/lib/vendor/autoload.php');
 
-// use its initializr
-use Yiinitializr\Helpers\Initializer;
-
-// tell the Initializer class providing the root, the application config name, 
-// and the files to merge -very useful when working with advanced boilerplates 
-// and different environments
-Initializer::create('./../app', 'main', array('common', 'env', 'local'))->run();
+Yiinitializr\Helpers\Initializer::create('./../', 'frontend', array(
+	__DIR__ .'/../../common/config/main.php',
+	__DIR__ .'/../../common/config/env.php',
+	__DIR__ .'/../../common/config/local.php'
+))->run();
 ```
 
 ##How to use it
