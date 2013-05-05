@@ -206,7 +206,7 @@ class ArrayX
 			// otherwise we will set the stripped value.
 			if (is_array($value))
 			{
-				$result[$key] = array_strip_slashes($value);
+				$result[$key] = self::stripSlashes($value);
 			} else
 			{
 				$result[$key] = stripslashes($value);
