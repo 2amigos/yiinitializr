@@ -41,7 +41,8 @@ class Initializer
 		if (php_sapi_name() !== 'cli') // aren't we in console?
 		{
 			$app = \Yii::createWebApplication($config); // create web
-			$app->setAliases($config['aliases']);
+			if(isset($config['aliases']) && !empty($config['aliases']))
+				$app->setAliases($config['aliases']);
 		}
 		else
 		{
