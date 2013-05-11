@@ -39,7 +39,11 @@ class Initializer
 		$config = self::config($configName, $mergeWith);
 
 		if (php_sapi_name() !== 'cli') // aren't we in console?
+		{
 			$app = \Yii::createWebApplication($config); // create web
+			if(isset($config['aliases']) && !empty($config['aliases']))
+				$app->setAliases($config['aliases']);
+		}
 		else
 		{
 			defined('STDIN') or define('STDIN', fopen('php://stdin', 'r'));
