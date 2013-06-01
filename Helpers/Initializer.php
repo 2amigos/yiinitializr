@@ -61,7 +61,7 @@ class Initializer
 	 */
 	public static function config($configName = 'main', $mergeWith = null)
 	{
-		$files = array($configName);
+		$files = array();
 		$directory = Config::value('yiinitializr.app.directories.config.' . $configName);
 		if (null === $directory)
 			throw new \Exception("Unable to find 'yiinitializr.app.directories.config.'{$configName} on the settings.");
@@ -79,6 +79,7 @@ class Initializer
 
 		// do we have any other configuration files to merge with?
 		$mergedSettingFiles = Config::value('yiinitializr.app.files.config.' . $configName);
+    $files[] = $configName;
 		if (null !== $mergedSettingFiles)
 		{
 			if (is_array($mergedSettingFiles))
