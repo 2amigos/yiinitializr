@@ -140,7 +140,8 @@ class Initializer
 		defined('YII_ENABLE_EXCEPTION_HANDLER') or define('YII_ENABLE_EXCEPTION_HANDLER', YII_ENABLE_ERROR_HANDLER);
 
 		// php config
-		error_reporting(-1);
+		if(isset($params['php.error_reporting']))
+			error_reporting($params['php.error_reporting']);
 		if(isset($params['php.defaultCharset']))
 			ini_set('default_charset', $params['php.defaultCharset']);
 		if(isset($params['php.timezone']))
