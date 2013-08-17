@@ -54,6 +54,9 @@ class Config
 
 			self::$_settings['envlock'] = file_exists(self::getEnvironmentLockFilePath());
 
+			if(($customSettings = ArrayX::get(self::$_settings, 'custom.path')) !== null && file_exists($customSettings)) {
+				self::$_settings = ArrayX::merge(self::$_settings, require_once($customSettings));
+			}
 		}
 		if (empty(self::$_settings))
 			throw new \Exception('Unable to find Yiinitialzr settings file!');

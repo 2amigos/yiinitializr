@@ -13,6 +13,9 @@ $app = $dirname . '/../../..';
 $root = $app . '/..';
 
 return array(
+	'custom' => array(
+		'path' => $app . '/config/settings.php',
+	),
 	'yii' => array(
 		'path' => $app . '/lib/vendor/yiisoft/yii/framework'
 	),
