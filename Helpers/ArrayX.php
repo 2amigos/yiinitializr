@@ -30,7 +30,7 @@ class ArrayX
 	 *        $name = ArrayX::get($array, 'user.name', 'Taylor');
 	 * </code>
 	 *
-	 * @param  array $array
+	 * @param  array|\CAttributeCollection $array
 	 * @param  string $key
 	 * @param  mixed $default
 	 * @return mixed
