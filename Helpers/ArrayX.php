@@ -39,6 +39,10 @@ class ArrayX
 	{
 		if (is_null($key)) return $array;
 
+		// In case if given array is instance of CAttributeCollection.
+		// For example, Yii::app()->params value
+		if($array instanceof \CAttributeCollection) $array = $array->toArray();
+
 		// To retrieve the array item using dot syntax, we'll iterate through
 		// each segment in the key and look for that value. If it exists, we
 		// will return it, otherwise we will set the depth of the array and
