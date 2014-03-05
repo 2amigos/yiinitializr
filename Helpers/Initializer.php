@@ -38,12 +38,16 @@ class Initializer
 
 		$config = self::config($configName, $mergeWith);
 
+		$class = Config::value('yiinitializr.app.classes.'.$configName);
+		if($class && !is_callable($class))
+			throw new Exception('yiinitializr.app.classes.'.$configName.' class must be callable.');
+
 		if (php_sapi_name() !== 'cli') // aren't we in console?
-			$app = \Yii::createWebApplication($config); // create web
+			$app = $class ? $class($config) : \Yii::createWebApplication($config); // create web
 		else
 		{
 			defined('STDIN') or define('STDIN', fopen('php://stdin', 'r'));
-			$app = \Yii::createConsoleApplication($config);
+			$app = $class ? $class($config) : \Yii::createConsoleApplication($config);
 			$app->commandRunner->addCommands($root . '/cli/commands');
 			$env = @getenv('YII_CONSOLE_COMMANDS');
 			if (!empty($env))
