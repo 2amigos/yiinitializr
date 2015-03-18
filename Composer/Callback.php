@@ -69,9 +69,9 @@ class Callback
 	/**
 	 * Displays welcome message
 	 * @static
-	 * @param \Composer\Script\Event $event
+	 * @param \Composer\Script\CommandEvent $event
 	 */
-	public static function preInstall(Event $event)
+	public static function preInstall(CommandEvent $event)
 	{
 		Console::output("\n%BYiinitialzr 1.0.1%n\n");
 		Console::output("* download packages specified in composer.json");
@@ -87,9 +87,9 @@ class Callback
 	/**
 	 * Executes a post-install callback
 	 * @static
-	 * @param \Composer\Script\Event $event
+	 * @param \Composer\Script\CommandEvent $event
 	 */
-	public static function postInstall(Event $event)
+	public static function postInstall(CommandEvent $event)
 	{
 		self::runHook('post-install');
 		Console::output("\n%GInstallation completed!%n\n");
@@ -123,9 +123,9 @@ class Callback
 	 * Executes ./yiic <vendor/<packageName>-<action>
 	 *
 	 * @static
-	 * @param \Composer\Script\Event $event
+	 * @param \Composer\Script\PackageEvent $event
 	 */
-	public static function postPackageInstall(Event $event)
+	public static function postPackageInstall(PackageEvent $event)
 	{
 		$installedPackage = $event->getOperation()->getPackage();
 		$hookName = $installedPackage->getPrettyName() . '-install';
@@ -136,9 +136,9 @@ class Callback
 	 * Executes ./yiic <vendor/<packageName>-<action>
 	 *
 	 * @static
-	 * @param \Composer\Script\Event $event
+	 * @param \Composer\Script\PackageEvent $event
 	 */
-	public static function postPackageUpdate(Event $event)
+	public static function postPackageUpdate(PackageEvent $event)
 	{
 		$installedPackage = $event->getOperation()->getTargetPackage();
 		$commandName = $installedPackage->getPrettyName() . '-update';
