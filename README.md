@@ -1,3 +1,5 @@
+# NOTE: DEPRECATED. At 2amigos we are not longer supporting Yii 1. We highly recommend you to adopt Yii 2 as soon as possible. 
+
 Yiinitializr
 ============
 
