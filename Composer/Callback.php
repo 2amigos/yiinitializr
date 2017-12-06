@@ -16,7 +16,9 @@
  */
 namespace Yiinitializr\Composer;
 
+use Composer\Script\CommandEvent;
 use Composer\Script\Event;
+use Composer\Script\PackageEvent;
 use Yiinitializr\Helpers\Initializer;
 use Yiinitializr\Helpers\Config;
 use Yiinitializr\Cli\Console;
